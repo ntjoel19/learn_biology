@@ -1,0 +1,570 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel='stylesheet' type='text/css' href='bootstrap/css/bootstrap.min.css'/>
+	<link rel='stylesheet' type='text/css' href='bootstrap/css/style.css'/>
+	<link rel='stylesheet' type='text/css' href='bootstrap/css/jquery-ui.css'/>
+	<link rel='stylesheet' type='text/css' href='bootstrap/css/font-awesome.min.css'/>
+	<link rel="stylesheet" type="text/css" href='bootstrap/css/juizDropDownMenu.css'/>
+	<link rel="stylesheet" type="text/css" href='bootstrap/css/style-main-left-menu.css'/>
+    <title>Experience laboratoire</title>
+	<script type="text/javascript">
+		function allowDrop(ev){
+			ev.preventDefault();
+		}
+		function drag(ev){
+			ev.dataTransfer.setData("Text",ev.target.id);
+		}
+		function drop(ev){
+			ev.preventDefault();
+			var data = ev.dataTransfer.getData("Text");
+			ev.target.appendChild(document.getElementById(data));
+		}
+    </script>
+	<style type="text/css">
+     /* Style pour l'exemple*/
+     
+      audio,.icone{
+     	display:none;
+     }
+      #menu-top,#entete_resultats{
+      	line-height : 100px;
+      	border-radius : 5px;
+      	background: #dbdbdb url(.ressources/main.png) repeat-x scroll 0 0;  
+		background: -webkit-gradient(linear,left bottom,left top,color-stop(0, #9193b9),color-stop(1, #a3a5d1));
+		background: -webkit-linear-gradient(center bottom , #9193b9 0%, #a3a5d1 100%) repeat scroll 0 0 #dbdbdb;  
+		background: -moz-linear-gradient(center bottom , #9193b9 0%, #a3a5d1 100%) repeat scroll 0 0 #dbdbdb;
+		margin-top:10px;
+		border: 1px solid #c0c0c0;
+      }
+      #zone-de-travail{
+      	line-height : 500px;
+      	border-radius : 5px;
+      	/*background-color: #f8f8f8;*/
+      	border: 1px solid #c0c0c0;
+      	margin-top:5px;
+      }
+      #option-doutil{
+      	border-radius : 5px;
+      	border: 1px solid #c0c0c0;
+      	margin-top:5px;
+      }
+      .ligne-carreau div{
+      	border-radius : 5px;
+      	border: 1px solid #c0c0c0;
+      }
+      
+      .no-border, .no-border div{
+      	border: none;
+      }
+      #footer{
+      	line-height : 40px;
+      	border-radius : 5px; 
+		background: -webkit-gradient(linear,left bottom,left top,color-stop(0, #9193b9),color-stop(1, #a3a5d1));
+		background: -webkit-linear-gradient(center bottom , #9193b9 0%, #a3a5d1 100%) repeat scroll 0 0 #dbdbdb;  
+		background: -moz-linear-gradient(center bottom , #9193b9 0%, #a3a5d1 100%) repeat scroll 0 0 #dbdbdb;
+		border: 1px solid #c0c0c0;
+      }
+      .btn-home{
+		  box-shadow: 8px 8px 12px #aaa;
+		  border-radius : 1000px;
+		  transition:background 1000ms,color 1000ms,border-color 500ms;
+      }
+      div.bg-primary{
+		  border-radius : 0px 0px 5px 5px;
+      }
+      div.bg-danger{
+		  border-radius : 0px 0px 5px 5px;
+		  background: #9193b9;
+      }
+      .btn-home:hover{
+		  background: #497d94;
+      }
+      .option_lecon{
+      	background : #fff
+      }
+      #ligne1 div{
+      	border-radius : 5px;
+      	border: 1px solid #c0c0c0;
+      }
+      #ligne2 div{
+      	border-radius : 5px;
+      	border: 1px solid #c0c0c0;
+      }
+      #ligne3 div{
+      	border-radius : 5px;
+      	border: 1px solid #c0c0c0;
+      }
+      #ligne4 div{
+      	border-radius : 5px;
+      	border: 1px solid #c0c0c0;
+      }
+      #ligne5 div{
+      	border-radius : 5px;
+      	border: 1px solid #c0c0c0;
+      }
+      #ligne6 div{
+      	border-radius : 5px;
+      	border: 1px solid #c0c0c0;
+      }
+      body{
+      	background-image : url('bootstrap/img/bg2.jpg');
+      	background-size : 100%;
+      }
+    </style>	
+	
+	<!-- Start WOWSlider.com HEAD section --> <!-- add to the <head> of your page -->
+	<link rel="stylesheet" type="text/css" href="engine0/style.css" />
+	<script type="text/javascript" src="engine0/jquery.js"></script>
+	<!-- End WOWSlider.com HEAD section -->
+	<!-- Start WOWSlider.com HEAD section --> <!-- add to the <head> of your page -->
+	<link rel="stylesheet" type="text/css" href="engine0/style.css" />
+	<!--script type="text/javascript" src="engine0/jquery.js"></script-->
+	<!-- End WOWSlider.com HEAD section --></head>
+</head>
+<body>
+	
+	<section id='entete'>
+    	<div class="container">		
+			<div id="menu-top" class="row">
+				<div class='col-md-1 col-xs-1 col-lg-1' style='margin-top:5px;'>
+					<img src="bootstrap/img/logo-min.png" /> 
+				</div>
+				<div class='col-md-6 col-xs-6 col-lg-6'>
+					<b>Détermination de groupes sanguins: méthode de SIMONIN</b>
+				</div>
+				<div class='col-md-3 col-xs-3 col-lg-3 btn-group' style='margin-top:3px;'>
+					<a href='labo3.html' title='Demarrer' class='btn btn-primary btn-large' >Recommencer <i class='fa fa-refresh'></i></a>
+				</div>
+				<div class='col-md-2 col-xs-2 col-lg-2'>
+					<a href="index.php" class='btn btn-primary btn-large' id='accueil'>
+						<i class='fa fa-home' aria-hidden="true"></i>
+					</a>
+					<a href='login.php' title='deconnexion' class='btn btn-primary btn-large' >
+						<i class='fa fa-sign-out' aria-hidden="true"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-offset-12">
+				
+			</div>
+		</div>
+    </section> 
+    
+    <div class="container">
+		<div class="row">
+		    <section id='outils'>
+		    	<div class="col-sm-1 col-md-1 col-lg-1 affix-sidebar">
+					<div class="sidebar-nav">
+					  <div class="navbar navbar-default" role="navigation">
+						<div class="navbar-header">
+						  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
+							  <span class="sr-only">Toggle navigation</span>
+							  <span class="icon-bar"></span>
+							  <span class="icon-bar"></span>
+							  <span class="icon-bar"></span>
+						  </button>
+						  <span class="visible-xs navbar-brand">Sidebar menu</span>
+						</div>
+						<div class="navbar-collapse collapse sidebar-navbar-collapse">
+						  <ul class="nav navbar-nav" id="sidenav01">
+							<li class="active">
+							  <a href="#" data-toggle="collapse" data-target="#toggleDemo0" data-parent="#sidenav01" class="collapsed">
+								  Outils
+							  </a>
+							</li>
+							<li id="bloc_blouse">
+								<a href="#" title='selectionner la blouse avant toute expérience' data-toggle="collapse" data-target="#toggleDemo2" data-parent="#sidenav01" class="collapsed" id='blouse'>
+									<span><img src='bootstrap/img/icones/blouse.png'></span>
+								</a>
+								<audio id='beep-two1' controls preload='auto'>
+									<source src='bootstrap/audio/son3.ogg'>
+								</audio>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="#" title='Outil pipette: pour extraire un petit volume de liquide' data-toggle="collapse" data-target="#toggleDemo2" data-parent="#sidenav01" class="collapsed" id='pipette'>
+									<span><img src='bootstrap/img/icones/pipette.png'></span>
+								</a>
+								<audio id='beep-two2' controls preload='auto'>
+									<source src='bootstrap/audio/son3.ogg' controls>
+								</audio>
+							</li>
+							<li>
+								<a href="#" title='Outil ciseaux: pour decouper. Servira dans la phase finale du caryotype' data-toggle="collapse" data-target="#toggleDemo2" data-parent="#sidenav01" class="collapsed" id='ciseaux'>
+									<span><img src='bootstrap/img/icones/ciseaux.png'></span>
+								</a>
+								<audio id='beep-two3' controls preload='auto'>
+									<source src='bootstrap/audio/son3.ogg' controls>
+								</audio>
+							</li>
+							<li>
+								<a href="#" title="Outil seringue: peut s'utiliser comme une pipette mais aussi pour injecter" data-toggle="collapse" data-target="#toggleDemo2" data-parent="#sidenav01" class="collapsed" id='seringue'>
+									<span><img src='bootstrap/img/icones/seringue.png'></span>
+								</a>
+								<audio id='beep-two4' controls preload='auto'>
+									<source src='bootstrap/audio/son3.ogg' controls>
+								</audio>
+							</li>
+							<li>
+								<a href="#" title='Outil bistouri: comme un couteau, il sert à sectionner, à découper' data-toggle="collapse" data-target="#toggleDemo2" data-parent="#sidenav01" class="collapsed" id='bistouri'>
+									<span><img src='bootstrap/img/icones/bistouri.png'></span>
+								</a>
+								<audio id='beep-two5' controls preload='auto'>
+									<source src='bootstrap/audio/son3.ogg' controls>
+								</audio>
+							</li>
+						  </ul>
+						</div><!--/.nav-collapse -->
+					</div>
+				  </div>
+				</div>	
+		    </section>
+		    <div class="col-sm-10 col-md-10 col-lg-10">
+		    	<div class="row" id='option-doutil'>
+		    		<section id='option_outils'>
+					   	<div class="col-sm-1 col-md-1 col-lg-1" id='img-doutils' style='border-right: 1px solid #c0c0c0;'>
+							<span class='blouse icone'>
+								<img src='bootstrap/img/icones/blouse.png'/>
+							</span>
+							<span class='pipette icone'>
+								<img src='bootstrap/img/icones/pipette.png'/>
+							</span>
+							<span class='seringue icone'>
+								<img src='bootstrap/img/icones/seringue.png'/>
+							</span>
+							<span class='bistouri icone'>
+								<img src='bootstrap/img/icones/bistouri.png'/>
+							</span>
+							<span class='ciseaux icone'>
+								<img src='bootstrap/img/icones/ciseaux.png'/>
+							</span>
+						</div>
+						<div class="col-sm-11 col-md-11 col-lg-11" id='option-doutils' >
+							<span >
+								<img src='bootstrap/img/icones/eleve.png'/>
+								<b> Pour la détermination du groupe sanguin, tu auras besoin de la <u>lame</u>
+									et de la <u>pipette</u>.
+								</b>
+							</span>  			
+						</div>	
+					</section>
+		    	</div>
+		    	<div class="row paillace">
+		    		<div class="col-sm-12 col-md-12 col-lg-12" id='zone-de-travail'>
+		    			<div class="row ligne-carreau">
+		    				<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 c3">
+		    					<div class='row no-border'>
+		    						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+				    					<div class="btn-group-vertical" style='margin-left:0px;'>
+										  <button type="button" class="btn btn-default btn-tube-init"><i class='fa fa-refresh'></i></button>
+										</div>
+									</div>
+		    						<div class='col-xs-8 col-sm-8 col-md-8 col-lg-8' class='tube_utilise' id='tube_utilise'>
+				    					<img src='bootstrap/img/icones/tube_essai_vide_gr.png' class='tube_essai' id='tb_vide'/>
+				    					<img src='bootstrap/img/icones/tube_essai_bleu_gr0.png' class='tube_essai' id='tb_bleu0' style='display:none'/>
+				    					<img src='bootstrap/img/icones/tube_essai_bleu_gr1.png' class='tube_essai' id='tb_bleu1' style='display:none'/>
+				    					<img src='bootstrap/img/icones/tube_essai_bleu_gr2.png' class='tube_essai' id='tb_bleu2' style='display:none'/>
+				    					<img src='bootstrap/img/icones/tube_essai_jaune_gr0.png' class='tube_essai' id='tb_jaune0' style='display:none'/>
+				    					<img src='bootstrap/img/icones/tube_essai_jaune_gr1.png' class='tube_essai' id='tb_jaune1' style='display:none'/>
+				    					<img src='bootstrap/img/icones/tube_essai_jaune_gr2.png' class='tube_essai' id='tb_jaune2' style='display:none'/>
+				    					<img src='bootstrap/img/icones/tube_essai_rouge_gr0.png' class='tube_essai' id='tb_rouge0' style='display:none'/>
+				    					<img src='bootstrap/img/icones/tube_essai_rouge_gr1.png' class='tube_essai' id='tb_rouge1' style='display:none'/>
+				    					<img src='bootstrap/img/icones/tube_essai_rouge_gr2.png' class='tube_essai' id='tb_rouge2' style='display:none'/>
+				    					<img src='bootstrap/img/icones/tube_essai_rouge_clair_gr1.png' class='tube_essai' id='tb_rouge_clair1' style='display:none'/>
+				    					<img src='bootstrap/img/icones/tube_essai_rouge_clair_gr2.png' class='tube_essai' id='tb_rouge_clair2' style='display:none'/>
+				    					<img src='bootstrap/img/icones/tube_essai_rouge_jaune_gr1.png' class='tube_essai' id='tb_rouge_jaune1' style='display:none'/>
+				    					<img src='bootstrap/img/icones/tube_essai_rouge_jaune_gr2.png' class='tube_essai' id='tb_rouge_jaune2' style='display:none'/>
+				    					<img src='bootstrap/img/icones/tube_essai_violet_gr0.png' class='tube_essai' id='tb_violet0' style='display:none'/>
+				    					<img src='bootstrap/img/icones/tube_essai_violet_gr1.png' class='tube_essai' id='tb_violet1' style='display:none'/>
+				    					<img src='bootstrap/img/icones/tube_essai_violet_gr2.png' class='tube_essai' id='tb_violet2' style='display:none'/>
+				    					<img src='bootstrap/img/icones/tube_essai_transp_gr0.png' class='tube_essai' id='tb_transp0' style='display:none'/>
+				    					<img src='bootstrap/img/icones/tube_essai_transp_gr1.png' class='tube_essai' id='tb_transp1' style='display:none'/>
+				    					<img src='bootstrap/img/icones/tube_essai_transp_gr2.png' class='tube_essai' id='tb_transp2' style='display:none'/>
+				    					<img src='bootstrap/img/icones/tube_essai_interdit_gr.png' class='tube_essai' id='tb_interdit' style='display:none'/>
+		    						</div>
+		    					</div>
+		    				</div>
+		    				<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 c4">
+		    					<div class='row no-border'>
+				    				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+				    					<div class="btn-group-vertical" style='margin-left:0px;'>
+										  <button type="button" class="btn btn-default btn-flacon-tri"><i class='fa fa-flask'></i></button>
+										  <button type="button" class="btn btn-default btn-flacon-ballon"><img alt="" src="bootstrap/img/icones/ico_ballon2.png"></button>
+										  <button type="button" class="btn btn-default btn-flacon-init"><i class='fa fa-refresh'></i></button>
+										</div>
+									</div>
+									<div class='col-xs-8 col-sm-8 col-md-8 col-lg-8' class='flacon_utilise' id='flacon-tri'>
+				    					<img src='bootstrap/img/icones/flacon_conique_vide.png' class='flacon_conique' id='flacon_tri_vide'/>
+				    					<img src='bootstrap/img/icones/flacon_conique_bleu_gr0.png' class='flacon_conique flacon' id='flc_bleu0' style='display:none'/>
+				    					<img src='bootstrap/img/icones/flacon_conique_bleu_gr1.png' class='flacon_conique flacon' id='flc_bleu1' style='display:none'/>
+				    					<img src='bootstrap/img/icones/flacon_conique_bleu_gr2.png' class='flacon_conique flacon' id='flc_bleu2' style='display:none'/>
+				    					<img src='bootstrap/img/icones/flacon_conique_jaune_gr0.png' class='flacon_conique flacon' id='flc_jaune0' style='display:none'/>
+				    					<img src='bootstrap/img/icones/flacon_conique_jaune_gr1.png' class='flacon_conique flacon' id='flc_jaune1' style='display:none'/>
+				    					<img src='bootstrap/img/icones/flacon_conique_jaune_gr2.png' class='flacon_conique flacon' id='flc_jaune2' style='display:none'/>
+				    					<img src='bootstrap/img/icones/flacon_conique_rouge_gr0.png' class='flacon_conique flacon' id='flc_rouge0' style='display:none'/>
+				    					<img src='bootstrap/img/icones/flacon_conique_rouge_gr1.png' class='flacon_conique flacon' id='flc_rouge1' style='display:none'/>
+				    					<img src='bootstrap/img/icones/flacon_conique_rouge_gr2.png' class='flacon_conique flacon' id='flc_rouge2' style='display:none'/>
+				    					<img src='bootstrap/img/icones/flacon_conique_rouge_jaune_gr1.png' class='flacon_conique flacon' id='flc_rouge_jaune1' style='display:none'/>
+				    					
+				    					<img src='bootstrap/img/icones/flacon_conique_rouge_jaune_gr2.png' class='flacon_conique flacon' id='flc_rouge_jaune2' style='display:none'/>
+				    					<img src='bootstrap/img/icones/flacon_conique_vert_gr.png' class='flacon_conique flacon' id='flc_vert' style='display:none'/>
+				    					<img src='bootstrap/img/icones/flacon_conique_violet_gr0.png' class='flacon_conique flacon' id='flc_violet0' style='display:none'/>
+				    					<img src='bootstrap/img/icones/flacon_conique_violet_gr1.png' class='flacon_conique flacon' id='flc_violet1' style='display:none'/>
+				    					<img src='bootstrap/img/icones/flacon_conique_violet_gr2.png' class='flacon_conique flacon' id='flc_violet2' style='display:none'/>
+				    					<img src='bootstrap/img/icones/flacon_conique_transp_gr0.png' class='flacon_conique flacon' id='flc_transp0' style='display:none'/>
+				    					<img src='bootstrap/img/icones/flacon_conique_transp_gr1.png' class='flacon_conique flacon' id='flc_transp1' style='display:none'/>
+				    					<img src='bootstrap/img/icones/flacon_conique_transp_gr2.png' class='flacon_conique flacon' id='flc_transp2' style='display:none'/>
+				    					<img src='bootstrap/img/icones/flacon_conique_rouge_clair_gr_plein.png' class='flacon_conique flacon' id='flc_rouge_clair_plein' style='display:none'/>
+				    					<img src='bootstrap/img/icones/flacon_conique_rouge_clair_gr1.png' class='flacon_conique flacon' id='flc_rouge_clair1' style='display:none'/>
+				    					<img src='bootstrap/img/icones/flacon_conique_rouge_clair_gr2.png' class='flacon_conique flacon' id='flc_rouge_clair2' style='display:none'/>
+				    					<img src='bootstrap/img/icones/flacon_interdit_gr.png' class='flacon_conique flacon' id='flc_interdit' style='display:none'/>
+				    				</div>
+				    				<div class='col-xs-8 col-sm-8 col-md-8 col-lg-8' class='flacon_utilise' id='flacon-ballon' style='display:none;'>
+				    					<img src='bootstrap/img/icones/flacon_spherique_vide.png' class='flacon_spherique flacon'/>
+				    					<img src='bootstrap/img/icones/flacon_spherique_bleu_gr.png' class='flacon_spherique flacon' id='fls_bleu' style='display:none'/>
+				    					<img src='bootstrap/img/icones/flacon_spherique_jaune_gr.png' class='flacon_spherique flacon' id='fls_jaune' style='display:none'/>
+				    					<img src='bootstrap/img/icones/flacon_spherique_rouge_gr.png' class='flacon_spherique flacon' id='fls_rouge' style='display:none'/>
+				    					<img src='bootstrap/img/icones/flacon_spherique_vert_gr.png' class='flacon_spherique flacon' id='fls_vert' style='display:none'/>
+				    					<img src='bootstrap/img/icones/flacon_spherique_violet_gr.png' class='flacon_spherique flacon' id='fls_violet' style='display:none'/>
+				    					<img src='bootstrap/img/icones/flacon_spherique_interdit.png' class='flacon_conique flacon' id='fls_interdit' style='display:none'/>
+				    				</div>
+								</div>
+		    				</div>
+		    				<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 c1">
+		    					<div class='row no-border'>
+				    				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+				    					<div class="btn-group-vertical" style='margin-left:0px;'>
+										  <button type="button" class="btn btn-default" id='camera'><i class='fa fa-camera'></i></button>
+										  <button type="button" class="btn btn-default">Z+</button>
+										  <button type="button" class="btn btn-default">Z-</button>
+										</div>
+									</div>
+									<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+				    					<img src='bootstrap/img/icones/microscope_grand.png' class='microscope'/>
+				    					<img src='bootstrap/img/icones/microscope+lame_grand.png' class='microscope' id='microsc-ready' style='display:none;'/>
+				    					<img src='bootstrap/img/icones/microscope+lame_violet_grand.png' class='microscope' id='microsc-ready_violet' style='display:none;'/>
+				    				</div>
+								</div>
+		    				</div>
+		    				<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 c2">
+		    					<div class='row no-border'>
+		    						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+				    					<div class="btn-group-vertical" style='margin-left:0px;'>
+										  <button type="button" class="btn btn-default btn-lame-init"><i class='fa fa-refresh'></i></button>
+										</div>
+									</div>
+				    				<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 les_lames">
+				    					<img src='bootstrap/img/icones/lame_grand2.png' title='lame 1' class='lame_grand' id='lame_1'/>
+				    					<img src='bootstrap/img/icones/lame_grand2.png' title='lame 2' class='lame_grand' id='lame_2'/>
+				    					<img src='bootstrap/img/icones/lame_grand2.png' title='lame 3' class='lame_grand' id='lame_3'/>
+				    					<img src='bootstrap/img/icones/lame_grand2_bleu.png' class='lame_grand' id='lam_bleu' style='display:none'/>
+						    			<img src='bootstrap/img/icones/lame_grand2_jaune.png' class='lame_grand' id='lam_jaune' style='display:none'/>
+						    			<img src='bootstrap/img/icones/lame_grand2_rouge.png' class='lame_grand' id='lam_rouge' style='display:none'/>
+						    			<img src='bootstrap/img/icones/lame_grand2_vert.png' class='lame_grand' id='lam_vert' style='display:none'/>
+						    			<img src='bootstrap/img/icones/lame_grand2_violet.png' class='lame_grand' id='lam_violet' style='display:none'/>
+						    			<img src='bootstrap/img/icones/lame_grand2_serum.png' class='lame_grand' id='lam_transp' style='display:none'/>
+						    			<img src='bootstrap/img/icones/lame_grand2_interdit.png' class='lame_grand' id='lam_interdit' style='display:none'/>
+		    						</div>
+		    					</div>
+		    				</div>
+				    		<div class="col-sm-12 col-md-12 col-lg-12" id='zone_resultat'>
+				    			<div class='row no-border'>
+				    				<div  class="col-sm-12 col-md-12 col-lg-12 progress">
+                                      <div  class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+                                        0% Complete
+                                      </div>
+                                    </div>
+					    			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 result"  id='result' style="border:1px solid #c0c0c0;height:300px;">
+				    					<div class='row no-border' id='caryo_kleinefelter' class='resulta_cam' style='display:none;'>
+				    						<div class='col-xs-12 col-sm-12 col-md-4 col-lg-4 lame_sang' id='lame1'>
+				    							&nbsp;
+				    						</div>
+				    						<div class='col-xs-12 col-sm-12 col-md-4 col-lg-4 lame_sang' id='lame1'>
+				    							&nbsp;
+				    						</div>
+				    						<div class='col-xs-12 col-sm-12 col-md-4 col-lg-4 lame_sang' id='lame1'>
+				    							&nbsp;
+				    						</div>
+				    					</div>
+				    				</div>
+				    				<div class='col-xs-12 col-sm-6 col-md-4 col-lg-4 result' style='border:1px solid #c0c0c0; display:none;' id='bravo'>
+				    					<img src='bootstrap/img/gif/bravoo.gif' width='100%' height='100%'/>
+				    				</div>
+				    				<div class='col-xs-12 col-sm-12 col-md-4 col-lg-4 schema_caryo' style='border:1px solid #c0c0c0;display:none;' id='echec'>
+							    		<img src='bootstrap/img/experience/bg_result_erone.png' width='100%' height='100%'/>
+							    	</div>
+				    				<div class='col-xs-12 col-sm-6 col-md-4 col-lg-4' style='border:1px solid #c0c0c0;'>
+				    					<div class='row no-border'>
+				    						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				    							<div class='bg-danger'>
+										          	Choisissez le bon résultat
+										        </div>
+				    						</div>
+				    						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+				    							<div class="radio">
+												  <label><input type="radio" id='A-' name="optradio">Groupe A-</label>
+												</div>
+												<div class="radio">
+												  <label><input type="radio" id='B-' name="optradio">Groupe B-</label>
+												</div>
+												<div class="radio">
+												  <label><input type="radio" id='AB-' name="optradio">Groupe AB-</label>
+												</div>
+												<div class="radio">
+												  <label><input type="radio" id='O-' name="optradio">Groupe O-</label>
+												</div>
+				    						</div>
+				    						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+				    							<div class="radio">
+												  <label><input type="radio" id='A+' name="optradio">Groupe A+</label>
+												</div>
+												<div class="radio">
+												  <label><input type="radio" id='B+' name="optradio">Groupe B+</label>
+												</div>
+												<div class="radio">
+												  <label><input type="radio" id='AB+' name="optradio">Groupe AB+</label>
+												</div>
+												<div class="radio">
+												  <label><input type="radio" id='O+' name="optradio">Groupe O+</label>
+												</div>
+				    						</div>
+				    					</div>
+				    				</div>
+				    				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+				    					<div class='row no-border'>
+				    						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				    							<textarea class="form-control" rows="12" id="consol" editable='false'></textarea>
+				    						</div>
+				    					</div>
+				    				</div>
+				    			</div>
+				    		</div>
+		    			</div>
+		    		</div>
+		    	</div>
+		    </div>
+		     
+		    <section id='serum'>
+		    	<div class="col-sm-1 col-md-1 col-lg-1 affix-sidebar">
+					<div class="sidebar-nav">
+					  <div class="navbar navbar-default" role="navigation">
+						<div class="navbar-header">
+						  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
+							  <span class="sr-only">Toggle navigation</span>
+							  <span class="icon-bar"></span>
+							  <span class="icon-bar"></span>
+							  <span class="icon-bar"></span>
+						  </button>
+						  <span class="visible-xs navbar-brand">Sidebar menu</span>
+						</div>
+						<div class="navbar-collapse collapse sidebar-navbar-collapse">
+						  <ul class="nav navbar-nav" id="sidenav01">
+							<li class="active">
+							  <a href="#" data-toggle="collapse" data-target="#toggleDemo0" data-parent="#sidenav01" class="cellule-reactif collapsed">
+								  Reactif
+							  </a>
+							</li>
+							<li>
+								<a href="#" data-toggle="collapse" title='Cristal Violet' data-target="#toggleDemo2" data-parent="#sidenav01" class="cellule-reactif collapsed" id='metyl-pp'>
+									<img src='bootstrap/img/icones/reactif_violet.png'/> C.V.
+								</a>
+								<audio id='beep-two1' controls preload='auto'>
+									<source src='bootstrap/audio/son3.ogg' controls>
+								</audio>
+							</li>
+							<li>
+								<a href="#" data-toggle="collapse" title='bleu de coomasie. Utiliser une pipette pour en extraire' data-target="#toggleDemo2" data-parent="#sidenav01" class="cellule-reactif collapsed" id='b-coomas'>
+									<img src='bootstrap/img/icones/reactif_bcoomas.png'/> BC
+								</a>
+								<audio id='beep-two2' controls preload='auto'>
+									<source src='bootstrap/audio/son3.ogg' controls>
+								</audio>
+							</li>
+							<li>
+								<a href="#" data-toggle="collapse" title='colchicine. Utiliser une pipette pour en extraire' data-target="#toggleDemo2" data-parent="#sidenav01" class="cellule-reactif collapsed" id='colchicine'>
+									<img src='bootstrap/img/icones/reactif_colchicine.png' /> Col.
+								</a>
+								<audio id='beep-two2' controls preload='auto'>
+									<source src='bootstrap/audio/son3.ogg' controls>
+								</audio>
+							</li>
+							<!-- Ici les serums -->
+							<li class="active">
+							  <a href="#" data-toggle="collapse" data-target="#toggleDemo0" data-parent="#sidenav01" class="cellule-reactif collapsed">
+								  Sérum
+							  </a>
+							</li>
+							<li>
+								<a href="#" data-toggle="collapse" title='Hématie A' data-target="#toggleDemo2" data-parent="#sidenav01" class="cellule-reactif collapsed" id='anti-A'>
+									<img src='bootstrap/img/icones/reactif_rouge.png'/> H_B
+								</a>
+								<audio id='beep-two4' controls preload='auto'>
+									<source src='bootstrap/audio/son3.ogg' controls>
+								</audio>
+							</li>
+							<li>
+								<a href="#" data-toggle="collapse" title='Hématie B' data-target="#toggleDemo2" data-parent="#sidenav01" class="cellule-reactif collapsed" id='anti-B'>
+									<img src='bootstrap/img/icones/reactif_rouge.png'/> H_A
+								</a>
+								<audio id='beep-two5' controls preload='auto'>
+									<source src='bootstrap/audio/son3.ogg' controls>
+								</audio>
+							</li>
+							<li>
+								<a href="#" data-toggle="collapse" title='Sérum Anti-RHESUS' data-target="#toggleDemo2" data-parent="#sidenav01" class="cellule-reactif collapsed" id='anti-RH'>
+									<img src='bootstrap/img/icones/serum.png' /> A_D
+								</a>
+								<audio id='beep-two6' controls preload='auto'>
+									<source src='bootstrap/audio/son2.ogg' controls>
+								</audio>
+							</li>
+							<!-- Ici je met les cellules pour experiences -->
+							<li class="active">
+							  <a href="#" data-toggle="collapse" data-target="#toggleDemo0" data-parent="#sidenav01" class="collapsed">
+								  Cellule
+							  </a>
+							</li>
+							<li>
+								<a href="#" data-toggle="collapse" data-target="#toggleDemo2" data-parent="#sidenav01" class="cellule-reactif collapsed" id='cellule_sang'>
+									<img src='bootstrap/img/icones/sang.png' title="sang: pour recueillir du sang utiliser l'outil pipette" id='image_sang'/>
+								</a>
+								<audio id='beep-two8' controls preload='auto'>
+									<source src='bootstrap/audio/son3.ogg'>
+								</audio>
+							</li>
+							<li>
+								<a href="#" data-toggle="collapse" data-target="#toggleDemo2" data-parent="#sidenav01" class="cellule-reactif collapsed" id='cellule_peau'>
+									<img src='bootstrap/img/icones/serum.png' title="Eau" />
+								</a>
+								<audio id='beep-two9' controls preload='auto'>
+									<source src='bootstrap/audio/son3.ogg' controls>
+								</audio>
+							</li>
+						  </ul>
+						</div><!--/.nav-collapse -->
+					</div>
+				  </div>
+				</div>
+		    </section>
+		</div>
+	</div>
+    <section id='entete'>
+    	<div class='container'>
+			<div class="row">
+				<div class="col-md-12" id="footer">
+					copyright © 2016 Jean Joel NTEPP
+				</div>
+			</div>
+		</div>		
+    </section>
+    <script src="bootstrap/jquery/jquery-ui.js"></script>
+    <script src="bootstrap/jquery/jquery.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/jquery.backstretch.min.js"></script>
+    <script src="bootstrap/js/script-labo3.js"></script>
+</body>
+</html>
